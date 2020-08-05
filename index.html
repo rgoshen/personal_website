@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio Website</title>
+    <!-- Icon -->
+    <link rel="icon" type="image/png" href="./resources/pics/logo.png" />
+    <!-- CSS only -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
+      integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX"
+      crossorigin="anonymous"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/resources/styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarToggler"
+        aria-controls="navbarToggler"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">
+        <img
+          class="logo"
+          src="./resources/pics/logo.png"
+          width="30"
+          height="30"
+          alt=""
+          loading="lazy"
+        />
+        Rick Goshen</a
+      >
+
+      <div class="collapse navbar-collapse" id="navbarToggler">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#hero" tabindex="-1">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about-me" tabindex="-1">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="#projects"
+              tabindex="-1"
+              aria-disabled="true"
+              >Projects</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="#contact"
+              tabindex="-1"
+              aria-disabled="true"
+              >Contact Me</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+
+    <!-- Hero Section -->
+    <section id="hero" class="h-full">
+      <div class="container">
+        <div class="jumbotron-fluid">
+          <h1 class="display-4">Hello, world!</h1>
+          <p class="lead">
+            This is a simple hero unit, a simple jumbotron-style component for
+            calling extra attention to featured content or information.
+          </p>
+          <hr class="my-4" />
+          <p>
+            It uses utility classes for typography and spacing to space content
+            out within the larger container.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- End Hero Section -->
+
+    <!-- About Me Section -->
+    <section id="about-me" class="h-full top-padding-100">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div
+              class="card text-center shadow p-3 mb-5 bg-white rounded"
+              style="width: 18rem;"
+            >
+              <img
+                src="./resources/pics/self-img.jpg"
+                class="card-img-top"
+                alt="selfie"
+              />
+              <div class="card-body">
+                <h5 class="card-title"></h5>
+                <p class="card-text"></p>
+                <a
+                  href="./resources/documents/Goshen Resume Master 2020.pdf"
+                  class="btn btn-primary"
+                  >Resume</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <h2>About Me</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+              harum inventore accusantium hic obcaecati, magni veniam quaerat
+              sequi, minima culpa maxime praesentium? Minima velit similique
+              doloremque culpa voluptates aut ad!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+              harum inventore accusantium hic obcaecati, magni veniam quaerat
+              sequi, minima culpa maxime praesentium? Minima velit similique
+              doloremque culpa voluptates aut ad!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+              harum inventore accusantium hic obcaecati, magni veniam quaerat
+              sequi, minima culpa maxime praesentium? Minima velit similique
+              doloremque culpa voluptates aut ad!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End About Me Section -->
+
+    <!-- Projects Section -->
+    <section id="projects" class="h-full top-padding-100">
+      <h2>My Projects</h2>
+      <div class="row cards">
+        <div class="col-md-4 d-flex justify-content-center">
+          <div
+            class="card text-center shadow p-3 mb-5 bg-white rounded"
+            style="width: 18rem;"
+          >
+            <img
+              src="http://via.placeholder.com/640x360"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex justify-content-center">
+          <div
+            class="card text-center shadow p-3 mb-5 bg-white rounded"
+            style="width: 18rem;"
+          >
+            <img
+              src="http://via.placeholder.com/640x360"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex justify-content-center">
+          <div
+            class="card text-center shadow p-3 mb-5 bg-white rounded"
+            style="width: 18rem;"
+          >
+            <img
+              src="http://via.placeholder.com/640x360"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Projects Section -->
+
+    <!-- Contact Us -->
+    <section id="contact">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col">
+            <h2>Contact Me</h2>
+            <p>Email: <a href="mailto:rick.goshen@gmail.com">Rick Goshen</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Contact Us -->
+
+    <!-- Javascript and dependencies -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js"
+      integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      // AOS.init();
+      AOS.init({
+        delay: 200, // values from 0 to 3000, with step 50ms
+        duration: 1500, // values from 0 to 3000, with step 50ms
+        once: false, // whether animation should happen only once - while scrolling down
+        mirror: false, // whether elements should animate out while scrolling past them
+      });
+    </script>
+  </body>
+</html>
