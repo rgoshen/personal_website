@@ -2,261 +2,684 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio Website</title>
-    <!-- Icon -->
-    <link
-      rel="icon"
-      type="image/png"
-      href="./resources/pics/NovusTerraLogo.png"
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <!-- CSS only -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
-      integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX"
-      crossorigin="anonymous"
-    />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/resources/styles/style.css" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>NT Portfolio Site</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="img/NovusTerraLogo.png" type="image/x-icon" />
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+      href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
     />
+    <!-- Google Fonts Roboto -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+    />
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <style></style>
   </head>
   <body>
-    <!-- Navbar -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarToggler"
-        aria-controls="navbarToggler"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a class="navbar-brand" href="index.html">
-        <img
-          class="logo"
-          src="./resources/pics/NovusTerraLogo.png"
-          width="30"
-          height="30"
-          alt=""
-          loading="lazy"
-        />
-        Rick Goshen</a
-      >
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- Container wrapper -->
+        <div class="container">
+          <!-- Navbar brand -->
+          <a class="navbar-brand" href="#">
+            <img
+              src="img/NovusTerraLogo.png"
+              height="30"
+              alt=""
+              loading="lazy"
+            />
+          </a>
 
-      <div class="collapse navbar-collapse" id="navbarToggler">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" href="#hero" tabindex="-1">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#about-me" tabindex="-1">About Me</a>
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link"
-              href="#projects"
-              tabindex="-1"
-              aria-disabled="true"
-              >Projects</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link"
-              href="#contact"
-              tabindex="-1"
-              aria-disabled="true"
-              >Contact Me</a
-            >
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <!-- End Navbar -->
+          <!-- Toggle button -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-    <!-- Hero Section -->
-    <section id="hero" class="h-full">
-      <div class="container">
-        <div class="jumbotron-fluid">
-          <h1 class="display-4">Hello, world!</h1>
-          <p class="lead">
-            This is a simple hero unit, a simple jumbotron-style component for
-            calling extra attention to featured content or information.
-          </p>
-          <hr class="my-4" />
-          <p>
-            It uses utility classes for typography and spacing to space content
-            out within the larger container.
-          </p>
+          <!-- Collapsible wrapper -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Left links -->
+            <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#features">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About me</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#projects">My projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+            </ul>
+            <!-- Left links -->
+
+            <!-- Social icons -->
+            <ul class="navbar-nav d-flex flex-row">
+              <!-- Icons -->
+              <li class="nav-item mr-3 mr-lg-0">
+                <a
+                  class="nav-link"
+                  href="https://www.facebook.com/rick.goshen/"
+                >
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </li>
+              <li class="nav-item mr-3 mr-lg-0">
+                <a class="nav-link" href="https://twitter.com/RickGoshen">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li class="nav-item mr-3 mr-lg-0">
+                <a class="nav-link" href="https://www.instagram.com/rgoshen72/">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </li>
+              <li class="nav-item mr-3 mr-lg-0">
+                <a
+                  class="nav-link"
+                  href="https://www.linkedin.com/in/rickgoshen/"
+                >
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </li>
+              <li class="nav-item mr-3 mr-lg-0">
+                <a class="nav-link" href="https://github.com/rgoshen">
+                  <i class="fab fa-github"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- Collapsible wrapper -->
+        </div>
+        <!-- Container wrapper -->
+      </nav>
+
+      <!-- Background image -->
+      <div
+        class="p-5 text-center bg-image shadow-2-strong"
+        style="background-image: url('img/hero-img.jpg'); height: 500px"
+      >
+        <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
+          <div class="d-flex justify-content-center align-items-center h-100">
+            <div class="text-white">
+              <h1 class="mb-3">Rick Goshen</h1>
+              <h4 class="mb-3 mx-5">Software Engineer</h4>
+              <a
+                class="btn btn-outline-light btn-lg m-1"
+                href="#about"
+                role="button"
+                >My skills</a
+              >
+              <a
+                class="btn btn-outline-light btn-lg m-1"
+                href="#projects"
+                role="button"
+                >My portfolio</a
+              >
+            </div>
+          </div>
         </div>
       </div>
-    </section>
-    <!-- End Hero Section -->
-
-    <!-- About Me Section -->
-    <section id="about-me" class="h-full top-padding-100">
+      <!-- Background image -->
+    </header>
+    <main class="my-5">
       <div class="container">
-        <div class="row">
-          <div class="col">
-            <div
-              class="card text-center shadow p-3 mb-5 bg-white rounded"
-              style="width: 18rem"
-            >
+        <!-- Section: Features -->
+        <section class="text-center" id="features">
+          <h3><strong>Features</strong></h3>
+
+          <div class="row">
+            <div class="col-lg-3 col-md-6">
+              <i class="fas fa-tachometer-alt fa-3x text-primary"></i>
+              <h5 class="my-4">Fast</h5>
+              <p class="mb-md-3">
+                Blazing fast load times is my highest priority
+              </p>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <i class="fas fa-mobile-alt fa-3x text-primary"></i>
+              <h5 class="my-4">Responsive</h5>
+              <p class="mb-md-3">
+                My layouts will look perfect on any device, regardless of screen
+                size.
+              </p>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <i class="far fa-lightbulb fa-3x text-primary"></i>
+              <h5 class="my-4">Intuitive</h5>
+              <p class="mb-md-3">
+                Easy to use, intuitive UX/UI out of the box.
+              </p>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <i class="fas fa-rocket fa-3x text-primary"></i>
+              <h5 class="my-4">Dynamic</h5>
+              <p class="mb-md-3">
+                Website don't have to be boring. I love to give them a life.
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- Section: Features -->
+        <hr class="my-5" />
+        <!-- Section: About me -->
+        <section class="text-center" id="about">
+          <h3 class="my-5">
+            <strong>About me</strong>
+          </h3>
+
+          <div class="row">
+            <div class="col-md-6 mb-4">
               <img
-                src="./resources/pics/self-img.jpg"
-                class="card-img-top"
-                alt="selfie"
+                src="img/me_scaled.jpg"
+                class="rounded-circle shadow-1-strong mb-4"
+                alt="Avatar"
               />
-              <div class="card-body">
-                <h5 class="card-title"></h5>
-                <p class="card-text"></p>
-                <a
-                  href="./resources/documents/Goshen Resume Master 2020.pdf"
-                  class="btn btn-primary"
-                  >Resume</a
+              <p><strong>Who's this guy?</strong></p>
+              <p>
+                I am a software engineer currently attending Springboard. I am
+                currently living in Tucson, AZ and looking for opportunities to
+                use my new and past skills to help xyz company succeed. I have
+                20 years of military experience in teamwork and leadership. This
+                experience has taught me to adapt and overcome any problem I
+                face. For the past 5 years as a geologist for the US Forest
+                Service, I have a strong track record of helping mining
+                companies of all sizes accomplish their goals of exploration and
+                extraction of valuable minerals. I am well versed in working
+                with multidisciplinary teams in order to develop clear and
+                concise environmental analysis documents. I am driven by a
+                strong desire and passion to learn new technologies. This helps
+                me with staying abreast of new mining techniques in order to
+                help the small miner achieve their goals.
+              </p>
+
+              <!-- Facebook -->
+              <a
+                class="btn btn-primary btn-floating m-1"
+                style="background-color: #3b5998"
+                href="https://www.facebook.com/rick.goshen"
+                role="button"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+
+              <!-- Twitter -->
+              <a
+                class="btn btn-primary btn-floating m-1"
+                style="background-color: #55acee"
+                href="https://twitter.com/RickGoshen"
+                role="button"
+                ><i class="fab fa-twitter"></i
+              ></a>
+
+              <!-- Instagram -->
+              <a
+                class="btn btn-primary btn-floating m-1"
+                style="background-color: #ac2bac"
+                href="https://www.instagram.com/rgoshen72/"
+                role="button"
+                ><i class="fab fa-instagram"></i
+              ></a>
+
+              <!-- LinkedIn -->
+              <a
+                class="btn btn-primary btn-floating m-1"
+                style="background-color: #2867b2"
+                href="https://www.linkedin.com/in/rickgoshen/"
+                role="button"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+
+              <!-- Github -->
+              <a
+                class="btn btn-primary btn-floating m-1"
+                style="background-color: 4078c0"
+                href="https://github.com/rgoshen"
+                role="button"
+                ><i class="fab fa-github"></i
+              ></a>
+            </div>
+            <div class="col-md-6 mb-4">
+              <!-- First row -->
+              <p><strong>Proficient (2+ years):</strong></p>
+              <div class="row">
+                <div class="col-md-4 mb-4">
+                  <i class="fab fa-html5 fa-3x m-2"></i>
+                  <p>HTML</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                  <i class="fab fa-css3 fa-3x m-2"></i>
+                  <p>CSS</p>
+                </div>
+              </div>
+              <!-- First row -->
+              <!-- Second row -->
+              <p><strong>Learning (1 year):</strong></p>
+              <div class="row">
+                <div class="col-md-4 mb-4">
+                  <i class="fab fa-js fa-3x m-2"></i>
+                  <p>JS</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                  <i class="fab fa-node-js fa-3x m-2"></i>
+                  <p>Node.js</p>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                  <i class="fab fa-react fa-3x m-2"></i>
+                  <p>React</p>
+                </div>
+              </div>
+              <!-- Second row -->
+              <!-- Third row -->
+              <div class="row">
+                <div class="col-md-4 mb-4">
+                  <i class="fab fa-python fa-3x m-2"></i>
+                  <p>Python</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                  <i class="fas fa-database fa-3x m-2"></i>
+                  <p>Databases</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                  <i class="fas fa-terminal fa-3x m-2"></i>
+                  <p>Linux</p>
+                </div>
+              </div>
+              <!-- Third row -->
+            </div>
+          </div>
+        </section>
+        <!-- Section: About me -->
+        <!-- Section: My projects -->
+        <section class="text-center" id="projects">
+          <h3 class="my-5"><strong>My projects</strong></h3>
+          <div class="row">
+            <div class="col-lg-4 col-md-12 mb-4">
+              <div class="card">
+                <div
+                  class="bg-image hover-overlay ripple"
+                  data-ripple-color="light"
                 >
+                  <img src="img/landing_page_index.png" class="img-fluid" />
+                  <a href="https://rgoshen.github.io/landing_page/">
+                    <div
+                      class="mask"
+                      style="background-color: rgba(251, 251, 251, 0.15)"
+                    ></div>
+                  </a>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Original Trombones</h5>
+                  <p class="card-text">First landing page</p>
+                  <p class="card-text">
+                    This is a Free Code Camp project using HTML, CSS, and
+                    Bootstrap 4.0.
+                  </p>
+                  <a
+                    href="https://rgoshen.github.io/landing_page/"
+                    class="btn btn-primary"
+                    >See live</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card">
+                <div
+                  class="bg-image hover-overlay ripple"
+                  data-ripple-color="light"
+                >
+                  <img src="img/tribute_page_index.png" class="img-fluid" />
+                  <a href="https://rgoshen.github.io/tribute_page/">
+                    <div
+                      class="mask"
+                      style="background-color: rgba(251, 251, 251, 0.15)"
+                    ></div>
+                  </a>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Tribute Page</h5>
+                  <p class="card-text">First tribute page</p>
+                  <p class="card-text">
+                    Free Code Camp project using HTML and CSS.
+                  </p>
+                  <a
+                    href="https://rgoshen.github.io/tribute_page/"
+                    class="btn btn-primary"
+                    >See live</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card">
+                <div
+                  class="bg-image hover-overlay ripple"
+                  data-ripple-color="light"
+                >
+                  <img src="img/survey_form_index.png" class="img-fluid" />
+                  <a href="https://rgoshen.github.io/survey_form/">
+                    <div
+                      class="mask"
+                      style="background-color: rgba(251, 251, 251, 0.15)"
+                    ></div>
+                  </a>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Survey Page</h5>
+                  <p class="card-text">First survey page</p>
+                  <p class="card-text">
+                    Free Code Camp project using HTML and CSS.
+                  </p>
+                  <a
+                    href="https://rgoshen.github.io/survey_form/"
+                    class="btn btn-primary"
+                    >See live</a
+                  >
+                </div>
               </div>
             </div>
           </div>
-          <div class="col">
-            <h2>About Me</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
-              harum inventore accusantium hic obcaecati, magni veniam quaerat
-              sequi, minima culpa maxime praesentium? Minima velit similique
-              doloremque culpa voluptates aut ad!
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
-              harum inventore accusantium hic obcaecati, magni veniam quaerat
-              sequi, minima culpa maxime praesentium? Minima velit similique
-              doloremque culpa voluptates aut ad!
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
-              harum inventore accusantium hic obcaecati, magni veniam quaerat
-              sequi, minima culpa maxime praesentium? Minima velit similique
-              doloremque culpa voluptates aut ad!
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End About Me Section -->
-
-    <!-- Projects Section -->
-    <section id="projects" class="h-full top-padding-100">
-      <h2>My Projects</h2>
-      <div class="row cards">
-        <div class="col-md-4 d-flex justify-content-center">
-          <div
-            class="card text-center shadow p-3 mb-5 bg-white rounded"
-            style="width: 18rem"
-          >
-            <img
-              src="http://via.placeholder.com/640x360"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+          <div class="row">
+            <div class="col-lg-4 col-md-12 mb-4">
+              <div class="card">
+                <div
+                  class="bg-image hover-overlay ripple"
+                  data-ripple-color="light"
+                >
+                  <img src="img/tech_page_index.png" class="img-fluid" />
+                  <a href="https://rgoshen.github.io/technical_page/">
+                    <div
+                      class="mask"
+                      style="background-color: rgba(251, 251, 251, 0.15)"
+                    ></div>
+                  </a>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Technical Page</h5>
+                  <p class="card-text">First technical page</p>
+                  <p class="card-text">
+                    This is a Free Code Camp project using HTML and CSS.
+                  </p>
+                  <a
+                    href="https://rgoshen.github.io/technical_page/"
+                    class="btn btn-primary"
+                    >See live</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12 mb-4">
+              <div class="card">
+                <div
+                  class="bg-image hover-overlay ripple"
+                  data-ripple-color="light"
+                >
+                  <img src="img/web-style-guide.png" class="img-fluid" />
+                  <a href="https://rgoshen.github.io/Website-Design-System/">
+                    <div
+                      class="mask"
+                      style="background-color: rgba(251, 251, 251, 0.15)"
+                    ></div>
+                  </a>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Web Style Guide</h5>
+                  <p class="card-text">First web style page</p>
+                  <p class="card-text">
+                    This is a Codecademy project using HTML and CSS.
+                  </p>
+                  <a
+                    href="https://rgoshen.github.io/Website-Design-System/"
+                    class="btn btn-primary"
+                    >See live</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12 mb-4">
+              <div class="card">
+                <div
+                  class="bg-image hover-overlay ripple"
+                  data-ripple-color="light"
+                >
+                  <img src="img/Quick_quiz_app.png" class="img-fluid" />
+                  <a href="https://rgoshen.github.io/quiz_app/">
+                    <div
+                      class="mask"
+                      style="background-color: rgba(251, 251, 251, 0.15)"
+                    ></div>
+                  </a>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Quick Quiz App</h5>
+                  <p class="card-text">
+                    This is an Udemy project using HTML, CSS, vanilla JavaScript
+                    and pulls its questions from an open trivia database api.
+                  </p>
+                  <a
+                    href="https://rgoshen.github.io/quiz_app/"
+                    class="btn btn-primary"
+                    >See live</a
+                  >
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-4 d-flex justify-content-center">
-          <div
-            class="card text-center shadow p-3 mb-5 bg-white rounded"
-            style="width: 18rem"
-          >
-            <img
-              src="http://via.placeholder.com/640x360"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+          <div class="row">
+            <div class="col-lg-4 col-md-12 mb-4">
+              <div class="card">
+                <div
+                  class="bg-image hover-overlay ripple"
+                  data-ripple-color="light"
+                >
+                  <img src="img/quote_generator.png" class="img-fluid" />
+                  <a href="https://rgoshen.github.io/quote_generator/">
+                    <div
+                      class="mask"
+                      style="background-color: rgba(251, 251, 251, 0.15)"
+                    ></div>
+                  </a>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Quote Generator App</h5>
+                  <p class="card-text">
+                    This is an Udemy project using HTML, CSS, vanilla JavaScript
+                    and Forismatic api.
+                  </p>
+                  <a
+                    href="https://rgoshen.github.io/quote_generator/"
+                    class="btn btn-primary"
+                    >See live</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12 mb-4">
+              <div class="card">
+                <div
+                  class="bg-image hover-overlay ripple"
+                  data-ripple-color="light"
+                >
+                  <img src="img/to-do-list.png" class="img-fluid" />
+                  <a href="https://rgoshen.github.io/todo_list/">
+                    <div
+                      class="mask"
+                      style="background-color: rgba(251, 251, 251, 0.15)"
+                    ></div>
+                  </a>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">To-Do List App</h5>
+                  <p class="card-text">
+                    This is a Springboard project using HTML, CSS, and vanilla
+                    JavaScript.
+                  </p>
+                  <a
+                    href="https://rgoshen.github.io/todo_list/"
+                    class="btn btn-primary"
+                    >See live</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12 mb-4">
+              <div class="card">
+                <div
+                  class="bg-image hover-overlay ripple"
+                  data-ripple-color="light"
+                >
+                  <img src="img/memory-game.png" class="img-fluid" />
+                  <a href="https://rgoshen.github.io/memory_game/">
+                    <div
+                      class="mask"
+                      style="background-color: rgba(251, 251, 251, 0.15)"
+                    ></div>
+                  </a>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Memory Game</h5>
+                  <p class="card-text">
+                    This is a Springboard project using HTML, CSS, and vanilla
+                    JavaScript.
+                  </p>
+                  <a
+                    href="https://rgoshen.github.io/memory_game/"
+                    class="btn btn-primary"
+                    >See live</a
+                  >
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-4 d-flex justify-content-center">
-          <div
-            class="card text-center shadow p-3 mb-5 bg-white rounded"
-            style="width: 18rem"
-          >
-            <img
-              src="http://via.placeholder.com/640x360"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+          <div class="row">
+            <div class="col-lg-4 col-md-12 mb-4">
+              <div class="card">
+                <div
+                  class="bg-image hover-overlay ripple"
+                  data-ripple-color="light"
+                >
+                  <img src="img/meme-generator.png" class="img-fluid" />
+                  <a href="https://rgoshen.github.io/meme_generator/">
+                    <div
+                      class="mask"
+                      style="background-color: rgba(251, 251, 251, 0.15)"
+                    ></div>
+                  </a>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Memory Generator App</h5>
+                  <p class="card-text">
+                    This is a Springboard project using HTML, CSS, and vanilla
+                    JavaScript.
+                  </p>
+                  <a
+                    href="https://rgoshen.github.io/meme_generator/"
+                    class="btn btn-primary"
+                    >See live</a
+                  >
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-    <!-- End Projects Section -->
+        </section>
+        <!-- Section: My projects -->
+        <!-- Section: Contact -->
+        <section class="text-center" id="contact">
+          <h3 class="my-5"><strong>Contact me</strong></h3>
 
-    <!-- Contact Us -->
-    <section id="contact">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col">
-            <h2>Contact Me</h2>
-            <p>Email: <a href="mailto:rick.goshen@gmail.com">Rick Goshen</a></p>
+          <div class="row d-flex justify-content-center">
+            <div class="col-md-6">
+              <form>
+                <!-- Name input -->
+                <div class="form-outline mb-4">
+                  <input type="text" id="form4Example1" class="form-control" />
+                  <label class="form-label" for="form4Example1">Name</label>
+                </div>
+
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                  <input type="email" id="form4Example2" class="form-control" />
+                  <label class="form-label" for="form4Example2"
+                    >Email address</label
+                  >
+                </div>
+
+                <!-- Message input -->
+                <div class="form-outline mb-4">
+                  <textarea
+                    class="form-control"
+                    id="form4Example3"
+                    rows="4"
+                  ></textarea>
+                  <label class="form-label" for="form4Example3">Message</label>
+                </div>
+
+                <!-- Checkbox -->
+                <div class="form-check d-flex justify-content-center mb-4">
+                  <input
+                    class="form-check-input mr-2"
+                    type="checkbox"
+                    value=""
+                    id="form4Example4"
+                    checked
+                  />
+                  <label class="form-check-label" for="form4Example4">
+                    Send me a copy of this message
+                  </label>
+                </div>
+
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-primary btn-block mb-4">
+                  Send
+                </button>
+              </form>
+            </div>
           </div>
-        </div>
+        </section>
+        <!-- Section: Contact -->
       </div>
-    </section>
-    <!-- End Contact Us -->
-
-    <!-- Javascript and dependencies -->
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js"
-      integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      // AOS.init();
-      AOS.init({
-        delay: 200, // values from 0 to 3000, with step 50ms
-        duration: 1500, // values from 0 to 3000, with step 50ms
-        once: false, // whether animation should happen only once - while scrolling down
-        mirror: false, // whether elements should animate out while scrolling past them
-      });
-    </script>
+    </main>
+    <footer>
+      <footer class="bg-light text-center text-lg-left">
+        <!-- Copyright -->
+        <div
+          class="text-center p-3"
+          style="background-color: rgba(0, 0, 0, 0.2)"
+        >
+          © 2020 Copyright: Rick Goshen
+        </div>
+        <!-- Copyright -->
+      </footer>
+    </footer>
+    <!-- Mine -->
+    <script src="js/site.js"></script>
+    <!-- MDB -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Custom scripts -->
+    <script type="text/javascript"></script>
   </body>
 </html>
