@@ -669,47 +669,41 @@
 
           <div class="row d-flex justify-content-center">
             <div class="col-md-6">
-              <form>
+              <form id="contact-form" method="POST" action="contact-form.php">
                 <!-- Name input -->
                 <div class="form-outline mb-4">
-                  <input type="text" id="contactName" class="form-control" />
-                  <label class="form-label" for="contactName">Name</label>
+                  <input type="text" id="name" class="form-control" />
+                  <label class="form-label" for="name">Name</label>
                 </div>
 
                 <!-- Email input -->
                 <div class="form-outline mb-4">
-                  <input type="email" id="contactEmail" class="form-control" />
-                  <label class="form-label" for="contactEmail"
-                    >Email address</label
-                  >
+                  <input type="email" id="email" class="form-control" />
+                  <label class="form-label" for="email">Email address</label>
+                </div>
+
+                <!-- Subject input -->
+                <div class="form-outline mb-4">
+                  <input type="text" id="subject" class="form-control" />
+                  <label class="form-label" for="subject">Subject</label>
                 </div>
 
                 <!-- Message input -->
                 <div class="form-outline mb-4">
                   <textarea
                     class="form-control"
-                    id="contactMessage"
+                    id="message"
                     rows="4"
                   ></textarea>
-                  <label class="form-label" for="contactMessage">Message</label>
-                </div>
-
-                <!-- Checkbox -->
-                <div class="form-check d-flex justify-content-center mb-4">
-                  <input
-                    class="form-check-input mr-2"
-                    type="checkbox"
-                    value=""
-                    id="copyMessage"
-                    checked
-                  />
-                  <label class="form-check-label" for="copyMessage">
-                    Send me a copy of this message
-                  </label>
+                  <label class="form-label" for="message">Message</label>
                 </div>
 
                 <!-- Submit button -->
-                <button type="submit" class="btn btn-primary btn-block mb-4">
+                <button
+                  type="submit"
+                  class="btn btn-primary btn-block mb-4"
+                  name="submit"
+                >
                   Send
                 </button>
               </form>
