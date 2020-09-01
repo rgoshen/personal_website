@@ -206,7 +206,7 @@
           </h3>
 
           <div class="row">
-            <div class="col-md-6 mb-4">
+            <div class="col-md-6 mb-4 fly">
               <img
                 src="img/me_scaled.jpg"
                 class="rounded-circle shadow-1-strong mb-4"
@@ -283,7 +283,7 @@
             <div class="col-md-6 mb-4">
               <!-- First row -->
               <p><strong>Proficient (2+ years):</strong></p>
-              <div class="row">
+              <div class="row fly">
                 <div class="col-md-4 mb-4">
                   <i class="fab fa-html5 fa-3x m-2"></i>
                   <p>HTML</p>
@@ -296,7 +296,7 @@
               <!-- First row -->
               <!-- Second row -->
               <p><strong>Learning (1 year):</strong></p>
-              <div class="row">
+              <div class="row fly">
                 <div class="col-md-4 mb-4">
                   <i class="fab fa-js fa-3x m-2"></i>
                   <p>JS</p>
@@ -313,7 +313,7 @@
               </div>
               <!-- Second row -->
               <!-- Third row -->
-              <div class="row">
+              <div class="row fly">
                 <div class="col-md-4 mb-4">
                   <i class="fab fa-python fa-3x m-2"></i>
                   <p>Python</p>
@@ -337,7 +337,12 @@
           <h3 class="my-5"><strong>My projects</strong></h3>
           <div class="row">
             <div class="col-lg-4 col-md-12 mb-4">
-              <div class="card">
+              <div
+                class="card block"
+                data-rotate-y="180deg"
+                data-move-z="-200px"
+                data-move-x="-300px"
+              >
                 <div
                   class="bg-image hover-overlay ripple"
                   data-ripple-color="light"
@@ -369,8 +374,13 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div class="card">
+            <div class="col-lg-4 col-md-12 mb-4">
+              <div
+                class="card block"
+                data-rotate-x="180deg"
+                data-rotate-y="180deg"
+                data-move-z="-700px"
+              >
                 <div
                   class="bg-image hover-overlay ripple"
                   data-ripple-color="light"
@@ -401,13 +411,13 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div class="card">
+            <div class="col-lg-4 col-md-12 mb-4">
+              <div class="card block" data-rotate-x="180deg" data-rotate-y="45deg" data-move-z="-500px">
                 <div
                   class="bg-image hover-overlay ripple"
                   data-ripple-color="light"
                 >
-                  <img src="img/survey_form_index.png" class="img-fluid" />
+                  <img src="img/survey_form_index.png" class="img-fluid"/>
                   <a
                     href="https://rgoshen.github.io/survey_form/"
                     target="_blank"
@@ -436,7 +446,7 @@
           </div>
           <div class="row">
             <div class="col-lg-4 col-md-12 mb-4">
-              <div class="card">
+              <div class="card block" data-rotate-y="180deg" data-move-z="-100px" data-move-x="500px">
                 <div
                   class="bg-image hover-overlay ripple"
                   data-ripple-color="light"
@@ -468,7 +478,7 @@
               </div>
             </div>
             <div class="col-lg-4 col-md-12 mb-4">
-              <div class="card">
+              <div class="card block" data-rotate-y="180deg" data-move-z="-200px" data-move-x="-300px">
                 <div
                   class="bg-image hover-overlay ripple"
                   data-ripple-color="light"
@@ -500,7 +510,7 @@
               </div>
             </div>
             <div class="col-lg-4 col-md-12 mb-4">
-              <div class="card">
+              <div class="card block" data-rotate-x="180deg" data-rotate-y="180deg" data-move-z="-700px">
                 <div
                   class="bg-image hover-overlay ripple"
                   data-ripple-color="light"
@@ -531,7 +541,7 @@
           </div>
           <div class="row">
             <div class="col-lg-4 col-md-12 mb-4">
-              <div class="card">
+              <div class="card block" data-rotate-x="180deg" data-rotate-y="45deg" data-move-z="-500px">
                 <div
                   class="bg-image hover-overlay ripple"
                   data-ripple-color="light"
@@ -563,7 +573,7 @@
               </div>
             </div>
             <div class="col-lg-4 col-md-12 mb-4">
-              <div class="card">
+              <div class="card block" data-rotate-y="180deg" data-move-z="-100px" data-move-x="500px">
                 <div
                   class="bg-image hover-overlay ripple"
                   data-ripple-color="light"
@@ -595,7 +605,7 @@
               </div>
             </div>
             <div class="col-lg-4 col-md-12 mb-4">
-              <div class="card">
+              <div class="card block" data-rotate-y="180deg" data-move-z="-200px" data-move-x="-300px">
                 <div
                   class="bg-image hover-overlay ripple"
                   data-ripple-color="light"
@@ -627,9 +637,9 @@
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-lg-4 col-md-12 mb-4">
-              <div class="card">
+          <div class="row"</div>
+            <div class="col-lg-4 col-md-12 mb-4"</div>
+              <div class="card block" data-rotate-x="180deg" data-rotate-y="180deg" data-move-z="-700px">
                 <div
                   class="bg-image hover-overlay ripple"
                   data-ripple-color="light"
@@ -729,11 +739,17 @@
         <!-- Copyright -->
       </footer>
     </footer>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <!-- Mine -->
-    <script src="js/site.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/jquery.smoove.js"></script>
     <!-- MDB -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
     <!-- Custom scripts -->
     <script type="text/javascript"></script>
+    <script>
+      $(".block").smoove({ offset: "40%" });
+    </script>
   </body>
 </html>
