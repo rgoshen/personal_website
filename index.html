@@ -30,7 +30,7 @@
     <header>
       <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
         <!-- Container wrapper -->
-        <div class="container">
+        <div class="container" role="wrapper">
           <!-- Navbar brand -->
           <a class="navbar-brand" href="#">
             <img
@@ -56,7 +56,11 @@
           </button>
 
           <!-- Collapsible wrapper -->
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div
+            class="collapse navbar-collapse"
+            id="navbarSupportedContent"
+            role="collapsible navbar"
+          >
             <!-- Left links -->
             <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
               <li class="nav-item">
@@ -137,9 +141,16 @@
         class="p-5 text-center bg-image shadow-2-strong"
         style="background-image: url('img/hero-img.jpg'); height: 500px"
       >
-        <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
-          <div class="d-flex justify-content-center align-items-center h-100">
-            <div class="text-white">
+        <div
+          class="mask"
+          style="background-color: rgba(0, 0, 0, 0.6)"
+          role="mask"
+        >
+          <div
+            class="d-flex justify-content-center align-items-center h-100"
+            role="flex container"
+          >
+            <div class="text-white" role="heading">
               <h1 class="mb-3">Rick Goshen</h1>
               <h4 class="mb-3 mx-5">Software Engineer</h4>
               <a
@@ -161,20 +172,20 @@
       <!-- Background image -->
     </header>
     <main class="my-5">
-      <div class="container">
+      <div class="container" role="features">
         <!-- Section: Features -->
         <section class="text-center" id="features">
           <h3><strong>Features</strong></h3>
 
-          <div class="row">
-            <div class="col-lg-3 col-md-6">
+          <div class="row" role="row">
+            <div class="col-lg-3 col-md-6" role="column">
               <i class="fas fa-tachometer-alt fa-3x text-primary"></i>
               <h5 class="my-4">Fast</h5>
               <p class="mb-md-3">
                 Blazing fast load times is my highest priority
               </p>
             </div>
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-3 col-md-6" role="column">
               <i class="fas fa-mobile-alt fa-3x text-primary"></i>
               <h5 class="my-4">Responsive</h5>
               <p class="mb-md-3">
@@ -182,14 +193,14 @@
                 size.
               </p>
             </div>
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-3 col-md-6" role="column">
               <i class="far fa-lightbulb fa-3x text-primary"></i>
               <h5 class="my-4">Intuitive</h5>
               <p class="mb-md-3">
                 Easy to use, intuitive UX/UI out of the box.
               </p>
             </div>
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-3 col-md-6" role="column">
               <i class="fas fa-rocket fa-3x text-primary"></i>
               <h5 class="my-4">Dynamic</h5>
               <p class="mb-md-3">
@@ -206,8 +217,8 @@
             <strong>About me</strong>
           </h3>
 
-          <div class="row">
-            <div class="col-md-6 mb-4 fly">
+          <div class="row" role="row">
+            <div class="col-md-6 mb-4 fly" role="column">
               <img
                 src="img/me_scaled.jpg"
                 class="rounded-circle shadow-1-strong mb-4"
@@ -281,7 +292,7 @@
                 ><i class="fab fa-github"></i
               ></a>
             </div>
-            <div class="col-md-6 mb-4">
+            <div class="col-md-6 mb-4" role="column">
               <!-- First row -->
               <p><strong>Proficient (2+ years):</strong></p>
               <div class="row fly">
@@ -348,7 +359,11 @@
                   class="bg-image hover-overlay ripple"
                   data-ripple-color="light"
                 >
-                  <img src="img/landing_page_index.png" class="img-fluid" />
+                  <img
+                    src="img/landing_page_index.png"
+                    class="img-fluid"
+                    alt="landing page"
+                  />
                   <a
                     href="https://rgoshen.github.io/landing_page/"
                     target="_blank"
@@ -386,7 +401,11 @@
                   class="bg-image hover-overlay ripple"
                   data-ripple-color="light"
                 >
-                  <img src="img/tribute_page_index.png" class="img-fluid" />
+                  <img
+                    src="img/tribute_page_index.png"
+                    class="img-fluid"
+                    alt="tribute page"
+                  />
                   <a
                     href="https://rgoshen.github.io/tribute_page/"
                     target="_blank"
@@ -413,12 +432,21 @@
               </div>
             </div>
             <div class="col-lg-4 col-md-12 mb-4">
-              <div class="card block" data-rotate-x="180deg" data-rotate-y="45deg" data-move-z="-500px">
+              <div
+                class="card block"
+                data-rotate-x="180deg"
+                data-rotate-y="45deg"
+                data-move-z="-500px"
+              >
                 <div
                   class="bg-image hover-overlay ripple"
                   data-ripple-color="light"
                 >
-                  <img src="img/survey_form_index.png" class="img-fluid" alt="survey form"/>
+                  <img
+                    src="img/survey_form_index.png"
+                    class="img-fluid"
+                    alt="survey form"
+                  />
                   <a
                     href="https://rgoshen.github.io/survey_form/"
                     target="_blank"
@@ -447,12 +475,21 @@
           </div>
           <div class="row">
             <div class="col-lg-4 col-md-12 mb-4">
-              <div class="card block" data-rotate-y="180deg" data-move-z="-100px" data-move-x="500px">
+              <div
+                class="card block"
+                data-rotate-y="180deg"
+                data-move-z="-100px"
+                data-move-x="500px"
+              >
                 <div
                   class="bg-image hover-overlay ripple"
                   data-ripple-color="light"
                 >
-                  <img src="img/tech_page_index.png" class="img-fluid" alt="javascrip techincal page"/>
+                  <img
+                    src="img/tech_page_index.png"
+                    class="img-fluid"
+                    alt="javascript technical page"
+                  />
                   <a
                     href="https://rgoshen.github.io/technical_page/"
                     target="_blank"
@@ -479,12 +516,21 @@
               </div>
             </div>
             <div class="col-lg-4 col-md-12 mb-4">
-              <div class="card block" data-rotate-y="180deg" data-move-z="-200px" data-move-x="-300px">
+              <div
+                class="card block"
+                data-rotate-y="180deg"
+                data-move-z="-200px"
+                data-move-x="-300px"
+              >
                 <div
                   class="bg-image hover-overlay ripple"
                   data-ripple-color="light"
                 >
-                  <img src="img/web-style-guide.png" class="img-fluid" alt="web style guide"/>
+                  <img
+                    src="img/web-style-guide.png"
+                    class="img-fluid"
+                    alt="web style guide"
+                  />
                   <a
                     href="https://rgoshen.github.io/Website-Design-System/"
                     target="_blank"
@@ -511,12 +557,21 @@
               </div>
             </div>
             <div class="col-lg-4 col-md-12 mb-4">
-              <div class="card block" data-rotate-x="180deg" data-rotate-y="180deg" data-move-z="-700px">
+              <div
+                class="card block"
+                data-rotate-x="180deg"
+                data-rotate-y="180deg"
+                data-move-z="-700px"
+              >
                 <div
                   class="bg-image hover-overlay ripple"
                   data-ripple-color="light"
                 >
-                  <img src="img/Quick_quiz_app.png" class="img-fluid" alt="quick quiz"/>
+                  <img
+                    src="img/Quick_quiz_app.png"
+                    class="img-fluid"
+                    alt="quick quiz"
+                  />
                   <a href="https://rgoshen.github.io/quiz_app/" target="_blank">
                     <div
                       class="mask"
@@ -542,12 +597,21 @@
           </div>
           <div class="row">
             <div class="col-lg-4 col-md-12 mb-4">
-              <div class="card block" data-rotate-x="180deg" data-rotate-y="45deg" data-move-z="-500px">
+              <div
+                class="card block"
+                data-rotate-x="180deg"
+                data-rotate-y="45deg"
+                data-move-z="-500px"
+              >
                 <div
                   class="bg-image hover-overlay ripple"
                   data-ripple-color="light"
                 >
-                  <img src="img/quote_generator.png" class="img-fluid" alt="quote generator"/>
+                  <img
+                    src="img/quote_generator.png"
+                    class="img-fluid"
+                    alt="quote generator"
+                  />
                   <a
                     href="https://rgoshen.github.io/quote_generator/"
                     target="_blank"
@@ -574,12 +638,21 @@
               </div>
             </div>
             <div class="col-lg-4 col-md-12 mb-4">
-              <div class="card block" data-rotate-y="180deg" data-move-z="-100px" data-move-x="500px">
+              <div
+                class="card block"
+                data-rotate-y="180deg"
+                data-move-z="-100px"
+                data-move-x="500px"
+              >
                 <div
                   class="bg-image hover-overlay ripple"
                   data-ripple-color="light"
                 >
-                  <img src="img/to-do-list.png" class="img-fluid" alt="to do list"/>
+                  <img
+                    src="img/to-do-list.png"
+                    class="img-fluid"
+                    alt="to do list"
+                  />
                   <a
                     href="https://rgoshen.github.io/todo_list/"
                     target="_blank"
@@ -606,12 +679,21 @@
               </div>
             </div>
             <div class="col-lg-4 col-md-12 mb-4">
-              <div class="card block" data-rotate-y="180deg" data-move-z="-200px" data-move-x="-300px">
+              <div
+                class="card block"
+                data-rotate-y="180deg"
+                data-move-z="-200px"
+                data-move-x="-300px"
+              >
                 <div
                   class="bg-image hover-overlay ripple"
                   data-ripple-color="light"
                 >
-                  <img src="img/memory-game.png" class="img-fluid" alt="memory game"/>
+                  <img
+                    src="img/memory-game.png"
+                    class="img-fluid"
+                    alt="memory game"
+                  />
                   <a
                     href="https://rgoshen.github.io/memory_game/"
                     target="_blank"
@@ -638,14 +720,23 @@
               </div>
             </div>
           </div>
-          <div class="row"</div>
-            <div class="col-lg-4 col-md-12 mb-4"</div>
-              <div class="card block" data-rotate-x="180deg" data-rotate-y="180deg" data-move-z="-700px">
+          <div class="row">
+            <div class="col-lg-4 col-md-12 mb-4">
+              <div
+                class="card block"
+                data-rotate-x="180deg"
+                data-rotate-y="180deg"
+                data-move-z="-700px"
+              >
                 <div
                   class="bg-image hover-overlay ripple"
                   data-ripple-color="light"
                 >
-                  <img src="img/meme-generator.png" class="img-fluid" alt="meme generator"/>
+                  <img
+                    src="img/meme-generator.png"
+                    class="img-fluid"
+                    alt="meme generator"
+                  />
                   <a
                     href="https://rgoshen.github.io/meme_generator/"
                     target="_blank"
