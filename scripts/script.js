@@ -1,3 +1,9 @@
+const currentYear = document.getElementById("current-year");
+
+// update copyright date to current year
+year = new Date().getFullYear();
+currentYear.innerHTML = year;
+
 // fade animation - add fade class to elements
 $(window).on("load", function () {
   $(window)
@@ -80,5 +86,3 @@ $(".block").smoove({
   min_width: 768,
   min_height: false,
 });
-
-
