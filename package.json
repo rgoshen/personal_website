@@ -1,0 +1,23 @@
+{
+  "name": "personal_website",
+  "version": "1.0.0",
+  "description": "This is my personal website using HTML, CSS, javascript, Material Design for Bootstrap 4",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rgoshen/personal_website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rgoshen/personal_website/issues"
+  },
+  "homepage": "https://github.com/rgoshen/personal_website#readme",
+  "dependencies": {
+    "eslint": "^8.30.0"
+  }
+}
