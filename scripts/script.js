@@ -11,7 +11,7 @@ document.querySelectorAll('.scroll-button').forEach(button => {
     e.preventDefault(); // Prevent the default anchor behavior
     const targetId = e.currentTarget.getAttribute("href");
     const targetElement = document.querySelector(targetId);
-    const navbarHeight = document.querySelector('nav').offsetHeight; // Replace 'nav' with your navbar selector
+    const navbarHeight = document.querySelector('nav').offsetHeight;
 
     // Smooth scroll to the section, adjusted for the navbar height
     window.scrollTo({
