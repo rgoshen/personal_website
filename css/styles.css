@@ -20,6 +20,10 @@
     font-size: 1.5rem;
 }
 
+.btn-outline {
+    outline-offset: 3px;
+}
+
 #email {
     font-size: 2rem;
 }
