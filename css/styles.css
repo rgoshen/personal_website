@@ -16,6 +16,10 @@
     opacity: 1;
 }
 
+.sub-heading {
+    font-size: 1.5rem;
+}
+
 #email {
     font-size: 2rem;
 }
