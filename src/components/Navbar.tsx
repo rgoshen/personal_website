@@ -1,0 +1,60 @@
+import React, { useState } from 'react';
+import { NavbarProps } from '../types/NavbarTypes';
+import {
+  MDBCollapse,
+  MDBContainer,
+  MDBIcon,
+  MDBNavbar,
+  MDBNavbarBrand,
+  MDBNavbarItem,
+  MDBNavbarNav,
+  MDBNavbarToggler,
+} from 'mdb-react-ui-kit';
+import { Link as ScrollLink } from 'react-scroll';
+
+const Navbar: React.FC<NavbarProps> = ({ logoSrc, links }) => {
+  const [openNav, setOpenNav] = useState(true);
+
+  return (
+    <MDBNavbar expand='lg' light bgColor='light' fixed='top'>
+      <MDBContainer fluid>
+        <MDBNavbarBrand href='#'>
+          <img src={logoSrc} height='30' alt='' loading='lazy' />
+        </MDBNavbarBrand>
+        <MDBNavbarToggler
+          type='button'
+          aria-expanded='false'
+          aria-label='Toggle navigation'
+          onClick={() => setOpenNav(!openNav)}
+        >
+          <MDBIcon icon='bars' fas />
+        </MDBNavbarToggler>
+        <MDBCollapse navbar open={openNav}>
+          <MDBNavbarNav className='me-auto mb-2 mb-lg-0'>
+            {links.map((link, index) => (
+              <MDBNavbarItem key={index}>
+                {link.isScroll ? (
+                  <ScrollLink
+                    to={link.href.replace('#', '')} // react-scroll requires just the id name
+                    smooth={true}
+                    offset={-70} // Adjusts for navbar height if needed
+                    duration={500}
+                    className='nav-link'
+                  >
+                    {link.label}
+                  </ScrollLink>
+                ) : (
+                  <a href={link.href} className='nav-link'>
+                    {link.label}
+                  </a>
+                )}
+              </MDBNavbarItem>
+            ))}
+          </MDBNavbarNav>
+        </MDBCollapse>
+      </MDBContainer>
+    </MDBNavbar>
+  );
+};
+
+export default Navbar;
