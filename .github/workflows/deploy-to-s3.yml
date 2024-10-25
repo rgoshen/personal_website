@@ -52,4 +52,4 @@ jobs:
       # Step 7: Sync files to S3 (this step will sync only the ./dist folder)
       - name: Sync files to S3
         run: |
-          aws s3 sync ./dist s3://rsgoshen.us --delete --acl public-read
+          aws s3 sync ./dist s3://rsgoshen.us --delete
