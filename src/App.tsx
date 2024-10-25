@@ -3,6 +3,7 @@ import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 
 import './App.css';
 import Navbar from './components/Navbar';
+import logoSrc from './assets/bytebridge-logo.png';
 
 const navLinks = [
   { label: 'Home', href: 'home', isScroll: true },
@@ -29,7 +30,7 @@ const socialLinks = [
 const App: React.FC = () => {
   return (
     <>
-      <Navbar logoSrc='/src/assets/bytebridge-logo.png' links={navLinks} />
+      <Navbar logoSrc={logoSrc} links={navLinks} />
       {/* Other Components */}
     </>
   );
