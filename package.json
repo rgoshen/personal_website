@@ -1,0 +1,18 @@
+{
+  "name": "personal_website",
+  "version": "1.0.0",
+  "description": "This repository contains the source code for my personal website. It is built using **standard HTML, CSS, vanilla JavaScript**, and **Material Design for Bootstrap 4**. The site is hosted on AWS, with infrastructure managed through Terraform. Below are the details of the setup and deployment process.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^5.4.10"
+  }
+}

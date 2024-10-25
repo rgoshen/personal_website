@@ -18,18 +18,38 @@ jobs:
   AssumeRoleAndCallIdentity:
     runs-on: ubuntu-latest
     steps:
+      # Step 1: Checkout the repository
       - name: Git clone the repository
         uses: actions/checkout@v3
+
+      # Step 2: Set up Node.js (for Vite)
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16' # Use the Node.js version your project requires
+
+      # Step 3: Install dependencies (this installs Vite and other dependencies)
+      - name: Install dependencies
+        run: npm install
+
+      # Step 4: Build the project with Vite
+      - name: Build project
+        run: npm run build # This command will generate the ./dist folder
+
+      # Step 5: Configure AWS credentials
       - name: configure aws credentials
         uses: aws-actions/configure-aws-credentials@v1.7.0
         with:
           role-to-assume: arn:aws:iam::514531162242:role/GitHubAction-AssumeRoleWithAction
           role-session-name: GitHub_to_AWS_via_FederatedOIDC
           aws-region: ${{ env.AWS_REGION }}
-      # Hello from AWS: WhoAmI
+
+      # Step 6: Verify AWS connection (optional)
       - name: Sts GetCallerIdentity
         run: |
           aws sts get-caller-identity
+
+      # Step 7: Sync files to S3 (this step will sync only the ./dist folder)
       - name: Sync files to S3
         run: |
-          aws s3 sync . s3://rsgoshen.us --delete --acl public-read
+          aws s3 sync ./dist s3://rsgoshen.us --delete
