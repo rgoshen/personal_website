@@ -1,5 +1,9 @@
-# vscode settings
-.vscode/
+# other ide settings
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 
 # General
 .DS_Store

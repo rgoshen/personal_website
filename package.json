@@ -1,18 +1,30 @@
 {
   "name": "personal_website",
+  "private": true,
   "version": "1.0.0",
   "description": "This repository contains the source code for my personal website. It is built using **standard HTML, CSS, vanilla JavaScript**, and **Material Design for Bootstrap 4**. The site is hosted on AWS, with infrastructure managed through Terraform. Below are the details of the setup and deployment process.",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@eslint/js": "^9.13.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.3",
+    "eslint": "^9.13.0",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.14",
+    "globals": "^15.11.0",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.11.0",
     "vite": "^5.4.10"
   },
   "dependencies": {
