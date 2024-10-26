@@ -19,7 +19,7 @@ const Navbar: React.FC<NavbarProps> = ({ logoSrc, links }) => {
     <MDBNavbar expand='lg' light bgColor='light' fixed='top' className='px-5'>
       <MDBContainer fluid>
         <MDBNavbarBrand href='#'>
-          <img src={logoSrc} height='30' alt='' loading='lazy' />
+          <img src={logoSrc} height='30' alt='brand logo' loading='lazy' />
         </MDBNavbarBrand>
         <MDBNavbarToggler
           type='button'
