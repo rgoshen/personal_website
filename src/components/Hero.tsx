@@ -18,7 +18,7 @@ const Hero: React.FC<HeroProps> = ({
       <div className='mask'>
         <div className='text-white'>
           <h1 className='mb-3'>{title}</h1>
-          {subtitle && <p className='mb-3 mx-5'>{subtitle}</p>}
+          {subtitle && <p className='mb-3 mx-5 fs-4'>{subtitle}</p>}
           {buttons.map((button, index) => (
             <a
               key={index}
