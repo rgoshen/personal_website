@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavbarProps } from '../types/NavbarTypes';
+import { NavbarProps } from '../types/NavbarProps';
 import {
   MDBCollapse,
   MDBContainer,
@@ -16,7 +16,7 @@ const Navbar: React.FC<NavbarProps> = ({ logoSrc, links }) => {
   const [openNav, setOpenNav] = useState(true);
 
   return (
-    <MDBNavbar expand='lg' light bgColor='light' fixed='top'>
+    <MDBNavbar expand='lg' light bgColor='light' fixed='top' className='px-5'>
       <MDBContainer fluid>
         <MDBNavbarBrand href='#'>
           <img src={logoSrc} height='30' alt='' loading='lazy' />

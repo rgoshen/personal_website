@@ -4,6 +4,8 @@
   height: 500px;
   background-size: cover;
   background-position: center;
+  display: flex;
+  width: 100%;
 }
 
 .hero-section .mask {
@@ -11,17 +13,4 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
-}
-
-.hero-section .text-content {
-  text-align: center;
-}
-
-.hero-button {
-  color: #fff;
-  border: 1px solid #fff;
-  padding: 0.5rem 1rem;
-  margin: 0.5rem;
-  text-decoration: none;
 }
