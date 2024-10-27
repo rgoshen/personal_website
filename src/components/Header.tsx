@@ -1,8 +1,8 @@
 import React from 'react';
 import Navbar from './Navbar';
 import Hero from './Hero';
-import logoSrc from '../assets/bytebridge-logo.png';
-import heroSrc from '../assets/hero-img.jpg';
+import logoSrc from '/assets/bytebridge-logo.png';
+import heroSrc from '/assets/hero-img.jpg';
 
 const navLinks = [
   { label: 'Home', href: 'home', isScroll: true },

@@ -2,7 +2,7 @@ import React from 'react';
 import Profile from './Profile';
 import Skills from './Skills';
 
-import imageSrc from '../assets/me_scaled.jpg';
+import imageSrc from '/assets/me_scaled.jpg';
 
 const About: React.FC = () => {
   const bio = `I am a software engineer currently working for
@@ -30,7 +30,6 @@ const About: React.FC = () => {
       href: 'https://github.com/rgoshen',
       label: 'GitHub',
     },
-    // Add more links if needed
   ];
 
   const skills = [
