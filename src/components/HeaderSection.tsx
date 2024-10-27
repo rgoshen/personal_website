@@ -26,7 +26,7 @@ const socialLinks = [
   { icon: 'github', href: 'https://github.com/rgoshen', label: 'GitHub' },
 ];
 
-const Header = () => {
+const HeaderSection = () => {
   return (
     <header>
       <Navbar logoSrc={logoSrc} links={navLinks} />
@@ -43,4 +43,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default HeaderSection;

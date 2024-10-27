@@ -4,7 +4,7 @@ import Skills from './Skills';
 
 import imageSrc from '/assets/me_scaled.jpg';
 
-const About: React.FC = () => {
+const AboutSection: React.FC = () => {
   const bio = `I am a software engineer currently working for
                 Flexion Inc. I live in Tucson,
                 AZ. I have 20 years of military experience in teamwork and
@@ -77,4 +77,4 @@ const About: React.FC = () => {
   );
 };
 
-export default About;
+export default AboutSection;

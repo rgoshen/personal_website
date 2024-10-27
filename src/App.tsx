@@ -1,12 +1,13 @@
 import React from 'react';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import './App.css';
-import Header from './components/Header';
-import Features from './components/Features';
-import About from './components/About';
+import HeaderSection from './components/HeaderSection';
+import FeaturesSection from './components/FeaturesSection';
+import AboutSection from './components/AboutSection';
 import ProjectSection from './components/ProjectSection';
 import ContactSection from './components/ContactSection';
-import Footer from './components/Footer';
+import FooterSection from './components/FooterSection';
+import { ContactLink } from './types/ContactLink';
 
 const featureItems = [
   {
@@ -149,15 +150,15 @@ const contactLinks: ContactLink[] = [
 const App: React.FC = () => {
   return (
     <>
-      <Header />
-      <Features items={featureItems} />
-      <About />
+      <HeaderSection />
+      <FeaturesSection items={featureItems} />
+      <AboutSection />
       <ProjectSection
         personalProjects={personalProjects}
         professionalProjects={professionalProjects}
       />
       <ContactSection links={contactLinks} />
-      <Footer />
+      <FooterSection />
     </>
   );
 };

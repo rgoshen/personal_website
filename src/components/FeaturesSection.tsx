@@ -1,7 +1,7 @@
 import React from 'react';
 import { FeaturesProps } from '../types/FeatureProps';
 
-const Features: React.FC<FeaturesProps> = ({ items }) => {
+const FeaturesSection: React.FC<FeaturesProps> = ({ items }) => {
   return (
     <section className='text-center m-5' id='features'>
       <h3>
@@ -25,4 +25,4 @@ const Features: React.FC<FeaturesProps> = ({ items }) => {
   );
 };
 
-export default Features;
+export default FeaturesSection;
