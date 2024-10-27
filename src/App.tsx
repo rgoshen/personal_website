@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Features from './components/Features';
 import About from './components/About';
 import ProjectSection from './components/ProjectSection';
+import ContactSection from './components/ContactSection';
 
 const featureItems = [
   {
@@ -112,6 +113,38 @@ const professionalProjects = [
   },
 ];
 
+const contactLinks: ContactLink[] = [
+  {
+    url: 'mailto:rick.goshen@gmail.com',
+    label: 'email link',
+    iconClass: 'far fa-envelope',
+  },
+  {
+    url: 'https://www.facebook.com/rick.goshen',
+    label: 'facebook link',
+    iconClass: 'fab fa-facebook-f',
+    color: '#3b5998',
+  },
+  {
+    url: 'https://twitter.com/RickGoshen',
+    label: 'twitter link',
+    iconClass: 'fab fa-twitter',
+    color: '#55acee',
+  },
+  {
+    url: 'https://www.instagram.com/rgoshen72/',
+    label: 'instagram link',
+    iconClass: 'fab fa-instagram',
+    color: '#ac2bac',
+  },
+  {
+    url: 'https://www.linkedin.com/in/rickgoshen/',
+    label: 'linkedin link',
+    iconClass: 'fab fa-linkedin-in',
+    color: '#2867b2',
+  },
+];
+
 const App: React.FC = () => {
   return (
     <>
@@ -122,6 +155,7 @@ const App: React.FC = () => {
         personalProjects={personalProjects}
         professionalProjects={professionalProjects}
       />
+      <ContactSection links={contactLinks} />
     </>
   );
 };
