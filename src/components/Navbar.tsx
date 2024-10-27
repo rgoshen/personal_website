@@ -11,6 +11,7 @@ import {
   MDBNavbarToggler,
 } from 'mdb-react-ui-kit';
 import { Link as ScrollLink } from 'react-scroll';
+import './Navbar.css';
 
 const Navbar: React.FC<NavbarProps> = ({ logoSrc, links }) => {
   const [openNav, setOpenNav] = useState(true);
@@ -32,7 +33,7 @@ const Navbar: React.FC<NavbarProps> = ({ logoSrc, links }) => {
         <MDBCollapse navbar open={openNav}>
           <MDBNavbarNav className='me-auto mb-2 mb-lg-0'>
             {links.map((link, index) => (
-              <MDBNavbarItem key={index}>
+              <MDBNavbarItem key={index} className='linkCursor'>
                 {link.isScroll ? (
                   <ScrollLink
                     to={link.href.replace('#', '')} // react-scroll requires just the id name
