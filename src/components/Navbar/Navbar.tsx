@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavbarType } from '../types/Navbar';
+import { NavbarType } from '../../types/Navbar';
 import {
   MDBCollapse,
   MDBContainer,

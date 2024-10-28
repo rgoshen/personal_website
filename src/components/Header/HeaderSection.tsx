@@ -1,6 +1,6 @@
 import React from 'react';
-import Navbar from './Navbar';
-import Hero from './Hero';
+import Navbar from '../Navbar/Navbar';
+import Hero from '../Hero/Hero';
 import logoSrc from '/assets/bytebridge-logo.png';
 import heroSrc from '/assets/hero-img.jpg';
 

@@ -1,12 +1,12 @@
 import React from 'react';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import './App.css';
-import HeaderSection from './components/HeaderSection';
-import FeaturesSection from './components/FeaturesSection';
-import AboutSection from './components/AboutSection';
-import ProjectSection from './components/ProjectSection';
-import ContactSection from './components/ContactSection';
-import FooterSection from './components/FooterSection';
+import HeaderSection from './components/Header/HeaderSection';
+import FeaturesSection from './components/Feature/FeaturesSection';
+import AboutSection from './components/About/AboutSection';
+import ProjectSection from './components/Project/ProjectSection';
+import ContactSection from './components/Contact/ContactSection';
+import FooterSection from './components/Footer/FooterSection';
 import { ContactLink } from './types/ContactLink';
 
 const featureProps = [

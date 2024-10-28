@@ -1,5 +1,5 @@
 import React from 'react';
-import { FeaturesType } from '../types/Features';
+import { FeaturesType } from '../../types/Features';
 
 const FeaturesSection: React.FC<FeaturesType> = ({ items }) => {
   return (

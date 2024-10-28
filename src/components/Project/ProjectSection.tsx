@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import ProjectCard from './ProjectCard';
-import { Project } from '../types/Projects';
-import { setEqualHeight } from '../utils/setEqualHeight';
+import { Project } from '../../types/Projects';
+import { setEqualHeight } from '../../utils/setEqualHeight';
 
 interface ProjectSectionProps {
   personalProjects: Project[];

@@ -1,5 +1,5 @@
 import React from 'react';
-import { HeroType } from '../types/Hero';
+import { HeroType } from '../../types/Hero';
 import './Hero.css';
 import { Link as ScrollLink } from 'react-scroll';
 
