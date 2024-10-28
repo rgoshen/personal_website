@@ -1,8 +1,8 @@
 import React from 'react';
-import { HeroProps } from '../types/Hero';
+import { HeroType } from '../types/Hero';
 import './Hero.css';
 
-const Hero: React.FC<HeroProps> = ({
+const Hero: React.FC<HeroType> = ({
   backgroundImage,
   title,
   subtitle,
