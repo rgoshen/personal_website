@@ -1,0 +1,16 @@
+.hero-section {
+  position: relative;
+  color: #fff;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  width: 100%;
+}
+
+.hero-section .mask {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,50 @@
+.project-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  text-decoration: none;
+  border: 1px solid #ddd;
+  transition: transform 0.3s ease;
+  color: inherit;
+  cursor: default;
+  height: auto; /* Allow cards to adjust height based on content */
+  min-height: 400px; /* Optional: Set a minimum height to ensure consistency */
+}
+
+.project-card:hover {
+  transform: scale(1.02);
+}
+
+.project-card .card-img-top {
+  width: 100%;
+  object-fit: cover;
+  max-height: 180px; /* Control image height without restricting card height */
+}
+
+.project-card .card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Let the body take up remaining space */
+  padding: 1rem;
+  text-align: left;
+}
+
+.project-card .project-description {
+  font-size: 0.9rem;
+  color: #666;
+  flex-grow: 1; /* Allow description to grow as needed */
+  margin-bottom: 1rem;
+}
+
+.project-card .card-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-card .btn {
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+  align-self: flex-start;
+  margin-top: auto; /* Push button to the bottom */
+}
