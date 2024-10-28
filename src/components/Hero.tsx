@@ -1,6 +1,7 @@
 import React from 'react';
 import { HeroType } from '../types/Hero';
 import './Hero.css';
+import { Link as ScrollLink } from 'react-scroll';
 
 const Hero: React.FC<HeroType> = ({
   backgroundImage,
@@ -20,13 +21,16 @@ const Hero: React.FC<HeroType> = ({
           <h1 className='mb-3'>{title}</h1>
           {subtitle && <p className='mb-3 mx-5 fs-4'>{subtitle}</p>}
           {buttons.map((button, index) => (
-            <a
+            <ScrollLink
               key={index}
-              href={button.href}
+              to={button.href.replace('#', '')} // react-scroll requires just the id name
+              smooth={true}
+              offset={-70} // Adjusts for navbar height if needed
+              duration={500}
               className='btn btn-outline-light btn-lg m-1'
             >
               {button.label}
-            </a>
+            </ScrollLink>
           ))}
         </div>
       </div>
