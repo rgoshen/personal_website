@@ -3,6 +3,6 @@ interface Skill {
   iconClass: string;
 }
 
-export interface SkillsProps {
+export interface SkillsType {
   skills: Skill[];
 }

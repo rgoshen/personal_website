@@ -1,5 +1,5 @@
 import React from 'react';
-import { HeroProps } from '../types/HeroProps';
+import { HeroProps } from '../types/Hero';
 import './Hero.css';
 
 const Hero: React.FC<HeroProps> = ({

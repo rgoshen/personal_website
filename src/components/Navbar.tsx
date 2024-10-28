@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavbarProps } from '../types/NavbarProps';
+import { NavbarType } from '../types/Navbar';
 import {
   MDBCollapse,
   MDBContainer,
@@ -12,8 +12,9 @@ import {
 } from 'mdb-react-ui-kit';
 import { Link as ScrollLink } from 'react-scroll';
 import './Navbar.css';
+import CustomLink from './CustomLink';
 
-const Navbar: React.FC<NavbarProps> = ({ logoSrc, links }) => {
+const Navbar: React.FC<NavbarType> = ({ logoSrc, links }) => {
   const [openNav, setOpenNav] = useState(true);
 
   return (

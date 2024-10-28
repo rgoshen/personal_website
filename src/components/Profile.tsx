@@ -1,7 +1,7 @@
 import React from 'react';
-import { ProfileProps } from '../types/ProfileProps';
+import { ProfileType } from '../types/Profile';
 
-const Profile: React.FC<ProfileProps> = ({
+const Profile: React.FC<ProfileType> = ({
   imageSrc,
   altText,
   bio,

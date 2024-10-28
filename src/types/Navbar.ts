@@ -1,16 +1,12 @@
+import { SocialLink } from './SocialLink';
+
 export type NavLink = {
   label: string;
   href: string;
   isScroll?: boolean;
 };
 
-export type SocialLink = {
-  icon: string;
-  href: string;
-  label: string;
-};
-
-export interface NavbarProps {
+export interface NavbarType {
   logoSrc: string;
   links: NavLink[];
   socialLinks?: SocialLink[];

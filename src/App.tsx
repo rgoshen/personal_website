@@ -9,7 +9,7 @@ import ContactSection from './components/ContactSection';
 import FooterSection from './components/FooterSection';
 import { ContactLink } from './types/ContactLink';
 
-const featureItems = [
+const featureProps = [
   {
     icon: 'fas fa-tachometer-alt',
     title: 'Fast',
@@ -151,7 +151,7 @@ const App: React.FC = () => {
   return (
     <>
       <HeaderSection />
-      <FeaturesSection items={featureItems} />
+      <FeaturesSection items={featureProps} />
       <AboutSection />
       <ProjectSection
         personalProjects={personalProjects}

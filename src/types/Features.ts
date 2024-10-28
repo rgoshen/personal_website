@@ -4,6 +4,6 @@ export interface FeatureItem {
   description: string; // Feature description
 }
 
-export interface FeaturesProps {
+export interface FeaturesType {
   items: FeatureItem[]; // Array of feature items
 }

@@ -1,7 +1,7 @@
 import React from 'react';
-import { FeaturesProps } from '../types/FeatureProps';
+import { FeaturesType } from '../types/Features';
 
-const FeaturesSection: React.FC<FeaturesProps> = ({ items }) => {
+const FeaturesSection: React.FC<FeaturesType> = ({ items }) => {
   return (
     <section className='text-center m-5' id='features'>
       <h3>

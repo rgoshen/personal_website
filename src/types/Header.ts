@@ -1,7 +1,7 @@
-import { NavLink, SocialLink } from './NavbarProps'; // Reuse types from NavbarProps
-import { HeroButton } from './HeroProps';
+import { NavLink, SocialLink } from './Navbar'; // Reuse types from NavbarProps
+import { HeroButton } from './Hero';
 
-export interface HeaderProps {
+export interface HeaderType {
   logoSrc: string;
   navLinks: NavLink[];
   socialLinks: SocialLink[];

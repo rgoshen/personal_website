@@ -3,7 +3,7 @@ export interface HeroButton {
   href: string;
 }
 
-export interface HeroProps {
+export interface HeroType {
   backgroundImage: string;
   title: string;
   subtitle?: string;

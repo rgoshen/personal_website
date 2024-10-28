@@ -1,7 +1,7 @@
 import React from 'react';
-import { SkillsProps } from '../types/SkillsProps';
+import { SkillsType } from '../types/Skills';
 
-const Skills: React.FC<SkillsProps> = ({ skills }) => {
+const Skills: React.FC<SkillsType> = ({ skills }) => {
   return (
     <div className='skills-list'>
       <div className='d-flex flex-wrap justify-content-evenly'>
