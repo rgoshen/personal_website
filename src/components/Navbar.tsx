@@ -12,10 +12,9 @@ import {
 } from 'mdb-react-ui-kit';
 import { Link as ScrollLink } from 'react-scroll';
 import './Navbar.css';
-import CustomLink from './CustomLink';
 
 const Navbar: React.FC<NavbarType> = ({ logoSrc, links }) => {
-  const [openNav, setOpenNav] = useState(true);
+  const [openNav, setOpenNav] = useState(false);
 
   return (
     <MDBNavbar expand='lg' light bgColor='light' fixed='top' className='px-5'>
@@ -25,7 +24,7 @@ const Navbar: React.FC<NavbarType> = ({ logoSrc, links }) => {
         </MDBNavbarBrand>
         <MDBNavbarToggler
           type='button'
-          aria-expanded='false'
+          aria-expanded={openNav}
           aria-label='Toggle navigation'
           onClick={() => setOpenNav(!openNav)}
         >
