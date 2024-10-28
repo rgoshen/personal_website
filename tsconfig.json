@@ -1,5 +1,15 @@
 {
   "compilerOptions": {
+    "esModuleInterop": true,
+    "jsx": "react-jsx",
+    "types": [
+      "@types/jest",
+      "@testing-library/jest-dom",
+      "./src/custom-matchers.d.ts",
+      "jest-dom-extend.d.ts",
+      "jest",
+      "node"
+    ],
     "forceConsistentCasingInFileNames": true,
     "strict": true
   },
