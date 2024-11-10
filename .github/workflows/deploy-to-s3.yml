@@ -52,4 +52,13 @@ jobs:
       # Step 7: Sync files to S3 (this step will sync only the ./dist folder)
       - name: Sync files to S3
         run: |
-          aws s3 sync ./dist s3://rsgoshen.us --delete
+          # Sync original and compressed files
+          aws s3 sync ./dist s3://rsgoshen.us --delete --exclude "*.gz" --exclude "*.br"
+
+          # Upload .gz files with Content-Encoding set to gzip
+          aws s3 cp dist s3://rsgoshen.us --recursive --exclude "*" --include "*.gz" \
+          --content-encoding gzip --metadata-directive REPLACE
+
+          # Upload .br files with Content-Encoding set to br
+          aws s3 cp dist s3://rsgoshen.us --recursive --exclude "*" --include "*.br" \
+          --content-encoding br --metadata-directive REPLACE
