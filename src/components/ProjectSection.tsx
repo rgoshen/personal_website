@@ -12,6 +12,7 @@ const ProjectSection: React.FC<ProjectSectionProps> = ({
   personalProjects,
   professionalProjects,
 }) => {
+  console.log('🧪 ProjectSection component rendered');
   useEffect(() => {
     console.log('🔧 Running setEqualHeight...');
     setEqualHeight('.project-card');
