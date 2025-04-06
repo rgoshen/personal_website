@@ -13,8 +13,23 @@ const ProjectSection: React.FC<ProjectSectionProps> = ({
   professionalProjects,
 }) => {
   useEffect(() => {
-    const cleanup = setEqualHeight('.project-card');
-    return () => cleanup();
+    function onLoadOrReady() {
+      setEqualHeight('.project-card');
+    }
+
+    if (document.readyState === 'complete') {
+      onLoadOrReady();
+    } else {
+      window.addEventListener('load', onLoadOrReady);
+    }
+
+    // Reapply on window resize
+    window.addEventListener('resize', onLoadOrReady);
+
+    return () => {
+      window.removeEventListener('load', onLoadOrReady);
+      window.removeEventListener('resize', onLoadOrReady);
+    };
   }, []);
   return (
     <section className='container my-5' id='projects'>

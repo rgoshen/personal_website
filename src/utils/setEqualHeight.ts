@@ -8,27 +8,22 @@
  *
  * @returns {void} This function does not return a value; it directly modifies the styles of the elements.
  */
-export function setEqualHeight(cardGroupSelector: string): () => void {
-  const cards = Array.from(
-    document.querySelectorAll<HTMLElement>(cardGroupSelector),
-  );
-  const observer = new ResizeObserver(() => {
-    let maxHeight = 0;
+export function setEqualHeight(cardGroupSelector: string): void {
+  const cards = document.querySelectorAll<HTMLElement>(cardGroupSelector);
+  let maxHeight = 0;
 
-    cards.forEach((card) => {
-      card.style.height = 'auto';
-      maxHeight = Math.max(maxHeight, card.offsetHeight);
-    });
-
-    cards.forEach((card) => {
-      card.style.height = `${maxHeight}px`;
-    });
+  // Reset heights
+  cards.forEach((card) => {
+    card.style.height = 'auto';
   });
 
-  cards.forEach((card) => observer.observe(card));
+  // Find tallest
+  cards.forEach((card) => {
+    maxHeight = Math.max(maxHeight, card.offsetHeight);
+  });
 
-  // Return cleanup function
-  return () => {
-    observer.disconnect();
-  };
+  // Set all to tallest height
+  cards.forEach((card) => {
+    card.style.height = `${maxHeight}px`;
+  });
 }
