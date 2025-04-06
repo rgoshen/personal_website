@@ -12,16 +12,16 @@ const ProjectSection: React.FC<ProjectSectionProps> = ({
   personalProjects,
   professionalProjects,
 }) => {
-  console.log('🧪 ProjectSection component rendered');
   useEffect(() => {
-    console.log('🔧 Running setEqualHeight...');
+    // Set equal height for cards on load and resize
     setEqualHeight('.project-card');
+    window.addEventListener('resize', () => setEqualHeight('.project-card'));
 
-    const handleResize = () => setEqualHeight('.project-card');
-    window.addEventListener('resize', handleResize);
-
+    // Cleanup listener on component unmount
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('resize', () =>
+        setEqualHeight('.project-card'),
+      );
     };
   }, []);
   return (
