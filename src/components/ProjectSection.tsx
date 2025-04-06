@@ -13,6 +13,7 @@ const ProjectSection: React.FC<ProjectSectionProps> = ({
   professionalProjects,
 }) => {
   useEffect(() => {
+    console.log('🔧 Running setEqualHeight...');
     setEqualHeight('.project-card');
 
     const handleResize = () => setEqualHeight('.project-card');
