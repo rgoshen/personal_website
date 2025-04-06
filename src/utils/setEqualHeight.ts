@@ -18,17 +18,21 @@ export function setEqualHeight(cardGroupSelector: string): void {
   let imagesLoaded = 0;
 
   const runEqualHeight = (): void => {
-    // Give layout a chance to fully settle
     requestAnimationFrame(() => {
+      console.log('📐 Measuring card heights...');
       let maxHeight = 0;
-      cards.forEach((card) => {
-        card.style.height = 'auto'; // Reset
+      cards.forEach((card, index) => {
+        card.style.height = 'auto';
+        console.log(`Card ${index} reset height: ${card.offsetHeight}px`);
       });
-      cards.forEach((card) => {
-        maxHeight = Math.max(maxHeight, card.offsetHeight);
+      cards.forEach((card, index) => {
+        const height = card.offsetHeight;
+        console.log(`Card ${index} measured height: ${height}px`);
+        maxHeight = Math.max(maxHeight, height);
       });
-      cards.forEach((card) => {
+      cards.forEach((card, index) => {
         card.style.height = `${maxHeight}px`;
+        console.log(`Card ${index} final height set to: ${maxHeight}px`);
       });
     });
   };
