@@ -9,21 +9,43 @@
  * @returns {void} This function does not return a value; it directly modifies the styles of the elements.
  */
 export function setEqualHeight(cardGroupSelector: string): void {
-  const cards = document.querySelectorAll<HTMLElement>(cardGroupSelector);
-  let maxHeight = 0;
+  const cards: HTMLElement[] = Array.from(
+    document.querySelectorAll(cardGroupSelector),
+  );
+  const images: HTMLImageElement[] = Array.from(
+    document.querySelectorAll(`${cardGroupSelector} img`),
+  );
 
-  // Reset heights
-  cards.forEach((card) => {
-    card.style.height = 'auto';
-  });
+  let loadedCount = 0;
 
-  // Find tallest
-  cards.forEach((card) => {
-    maxHeight = Math.max(maxHeight, card.offsetHeight);
-  });
+  const equalizeHeights = (): void => {
+    let maxHeight = 0;
+    cards.forEach((card) => {
+      card.style.height = 'auto';
+      maxHeight = Math.max(maxHeight, card.offsetHeight);
+    });
+    cards.forEach((card) => {
+      card.style.height = `${maxHeight}px`;
+    });
+  };
 
-  // Set all to tallest height
-  cards.forEach((card) => {
-    card.style.height = `${maxHeight}px`;
-  });
+  const checkAllImagesLoaded = (): void => {
+    loadedCount++;
+    if (loadedCount === images.length) {
+      equalizeHeights();
+    }
+  };
+
+  if (images.length === 0) {
+    equalizeHeights();
+  } else {
+    images.forEach((img) => {
+      if (img.complete) {
+        checkAllImagesLoaded();
+      } else {
+        img.addEventListener('load', checkAllImagesLoaded);
+        img.addEventListener('error', checkAllImagesLoaded);
+      }
+    });
+  }
 }

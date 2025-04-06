@@ -13,22 +13,13 @@ const ProjectSection: React.FC<ProjectSectionProps> = ({
   professionalProjects,
 }) => {
   useEffect(() => {
-    function onLoadOrReady() {
-      setEqualHeight('.project-card');
-    }
+    setEqualHeight('.project-card');
 
-    if (document.readyState === 'complete') {
-      onLoadOrReady();
-    } else {
-      window.addEventListener('load', onLoadOrReady);
-    }
-
-    // Reapply on window resize
-    window.addEventListener('resize', onLoadOrReady);
+    const handleResize = () => setEqualHeight('.project-card');
+    window.addEventListener('resize', handleResize);
 
     return () => {
-      window.removeEventListener('load', onLoadOrReady);
-      window.removeEventListener('resize', onLoadOrReady);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
   return (
