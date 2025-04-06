@@ -15,36 +15,46 @@ export function setEqualHeight(cardGroupSelector: string): void {
   const images: HTMLImageElement[] = Array.from(
     document.querySelectorAll(`${cardGroupSelector} img`),
   );
+  let imagesLoaded = 0;
 
-  let loadedCount = 0;
-
-  const equalizeHeights = (): void => {
-    let maxHeight = 0;
-    cards.forEach((card) => {
-      card.style.height = 'auto';
-      maxHeight = Math.max(maxHeight, card.offsetHeight);
+  const runEqualHeight = (): void => {
+    // Give layout a chance to fully settle
+    requestAnimationFrame(() => {
+      let maxHeight = 0;
+      cards.forEach((card) => {
+        card.style.height = 'auto'; // Reset
+      });
+      cards.forEach((card) => {
+        maxHeight = Math.max(maxHeight, card.offsetHeight);
+      });
+      cards.forEach((card) => {
+        card.style.height = `${maxHeight}px`;
+      });
     });
-    cards.forEach((card) => {
-      card.style.height = `${maxHeight}px`;
-    });
-  };
-
-  const checkAllImagesLoaded = (): void => {
-    loadedCount++;
-    if (loadedCount === images.length) {
-      equalizeHeights();
-    }
   };
 
   if (images.length === 0) {
-    equalizeHeights();
+    runEqualHeight();
   } else {
     images.forEach((img) => {
       if (img.complete) {
-        checkAllImagesLoaded();
+        imagesLoaded++;
+        if (imagesLoaded === images.length) {
+          runEqualHeight();
+        }
       } else {
-        img.addEventListener('load', checkAllImagesLoaded);
-        img.addEventListener('error', checkAllImagesLoaded);
+        img.addEventListener('load', () => {
+          imagesLoaded++;
+          if (imagesLoaded === images.length) {
+            runEqualHeight();
+          }
+        });
+        img.addEventListener('error', () => {
+          imagesLoaded++;
+          if (imagesLoaded === images.length) {
+            runEqualHeight();
+          }
+        });
       }
     });
   }
